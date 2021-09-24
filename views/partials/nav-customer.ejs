@@ -1,0 +1,26 @@
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="/" class="w3-bar-item w3-button">HOME</a>
+    <a href="/customer" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> LIST ITEM</a>
+    <a href="/customer/profile" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> PROFILE</a>
+    <a href="/logout" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> LOGOUT</a>
+
+    <form action="/customer" method="GET" style="float: right; display:flex; margin-right: 10px;">
+      <input class="w3-input w3-btn" type="text" name="search" style="margin-right: 5px; color: black;" placeholder="Search by name">
+      <button type="submit" class="w3-btn"><i class="fa fa-search"></i></button>
+    </form>
+    
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="/" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    <a href="/register" class="w3-bar-item w3-button" onclick="toggleFunction()">REGISTER</a>
+    <a href="/login" class="w3-bar-item w3-button" onclick="toggleFunction()">LOGIN</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>

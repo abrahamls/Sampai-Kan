@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Nasi Goreng",
+    "description": "Nasi dengan bumbu-bumbu dapur yang lezat",
+    "price": 20000,
+    "imageUrl": "https://st.depositphotos.com/1692343/5094/i/950/depositphotos_50945415-stock-photo-healthy-homemade-fried-rice.jpg",
+    "CustomerId": null,
+    "CategoryId": 1
+  },
+  {
+    "name": "Burger",
+    "description": "Fast food dengan roti, daging sapi, selada, dengan saus",
+    "price": 25500,
+    "imageUrl": "https://st2.depositphotos.com/3957801/5642/i/950/depositphotos_56423065-stock-photo-bacon-burger.jpg",
+    "CustomerId": null,
+    "CategoryId": 1
+  },
+  {
+    "name": "Mie Ayam",
+    "description": "Makanan murah dengan menu mie campur dengan ayam",
+    "price": 12000,
+    "imageUrl": "https://st3.depositphotos.com/34780080/36925/i/1600/depositphotos_369255406-stock-photo-indonesian-food-mie-ayam-noodles.jpg",
+    "CustomerId": null,
+    "CategoryId": 2
+  },
+  {
+    "name": "Jus Jambu",
+    "description": "Minuman sehat dari buah jambu asli",
+    "price": 16000,
+    "imageUrl": "https://st2.depositphotos.com/1055484/10070/i/950/depositphotos_100703178-stock-photo-fresh-guava-juice-on-white.jpg",
+    "CustomerId": null,
+    "CategoryId": 2
+  },
+  {
+    "name": "Boba Brown Sugar",
+    "description": "Minuman boba dengan rasa gula aren yang nikmat",
+    "price": 19000,
+    "imageUrl": "https://st2.depositphotos.com/1692343/10724/i/950/depositphotos_107243282-stock-photo-homemade-milk-bubble-tea-with.jpg",
+    "CustomerId": null,
+    "CategoryId": 2
+  }
+]

@@ -1,0 +1,49 @@
+<%- include('partials/header') %> 
+  <%- include('partials/navbar') %> 
+  
+
+  
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h1 class="w3-center">REGISTER</h1>
+    
+    <% if(err) { %>
+      <%# err.forEach(el => { %>
+        <p style="color: red;"><%= err %></p>
+      <%# }) %>
+    <% } %>
+    
+  <div class="w3-row w3-padding-32 w3-section">
+    
+      <form action="/register" method="POST">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Full Name" name="fullName">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="password" placeholder="Password" name="password">
+          </div>
+        </div><br>
+
+        <input class="w3-input w3-border" type="text" placeholder="Email" name="email"><br>
+
+        <input class="w3-input w3-border" type="text" placeholder="Phone Number" name="phone"><br>
+
+        <textarea name="address" class="w3-input w3-border" placeholder="Address"></textarea><br>
+
+        <select name="role" class="w3-select w3-border">
+          <option value="" selected disabled>Select Role</option>
+          <option value="Driver">Driver</option>
+          <option value="Customer">Customer</option>
+        </select>
+
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> REGISTER
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<%- include('partials/footer') %> 

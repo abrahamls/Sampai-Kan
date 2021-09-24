@@ -1,0 +1,53 @@
+
+<%- include('../partials/header') %> 
+    <%- include('../partials/nav-customer') %> 
+    
+
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle" style="text-align: center;">
+        <span class="w3-xxlarge w3-text-white w3-wide"> GET YOUR FOODS AND BAVERAGES</span>
+        </div>
+    </div>
+    
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <h3 class="w3-center">Choose Your Order</h3>
+        <p class="w3-center"><em>Let us to deliver your order with fast and efficiently</em></p><br>
+    
+        <div class="w3-row-padding w3-center">
+            <% data.forEach(item => { %>
+
+                <div class="w3-col m6" style="margin-bottom: 20px; box-sizing: 1px 1px 10px rgba(0,0,0,0.5);">
+                    <div class="w3-card-4">
+                        <img src="<%= item.imageUrl %>" style="width: 100%;" onclick="onClick(this)" class="w3-hover-opacity">
+                        <div class="w3-container w3-center">
+                            <p><strong><%= item.name %> - <%= item.Category.name %> </strong><br> <%= item.description %> <br><strong><%= formatPrice(item.price) %> </strong> </p>
+                            
+                        </div>
+                        <% if (item.CustomerId) { %>
+                            <button class="w3-btn" style="width: 100%; background-color: #cc865b; color: black;">Purchased</button>
+                        <% } else { %>
+                            <a href="/customer/buy/<%= item.id %>" class="w3-btn" style="width: 100%; background-color: #cc865b; color: black;">Buy</a>
+                        <% }%> 
+                    </div>
+                </div>
+            <% }) %>
+
+        </div>
+    </div>
+    
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+
+<%# console.log(data) %> 
+<%- include('../partials/footer') %> 
+
+<%# console.log(data) %> 

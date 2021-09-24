@@ -1,0 +1,43 @@
+<%- include('../partials/header') %> 
+    <%- include('../partials/nav-customer') %> 
+    
+    <div class="w3-container" style="width: 70%; margin: 100px auto 10px;">
+        <h3>Detail Profile</h3>
+
+        <form action="/customer/profile" method="POST">
+            <label>Name:  </label><br>
+            <input class="w3-input" type="text" name="fullName" id="" value="<%= customer.fullName %>"><br><br>
+            <label>Email: </label><br>
+            <input class="w3-input" type="text" name="email" id="" value="<%= customer.email %>"><br><br>
+            <label>Phone: </label><br>
+            <input class="w3-input" type="text" name="phone" id="" value="<%= customer.phone %>"><br><br>
+            <label>Address: </label><br>
+            <input class="w3-input" type="text" name="address" id="" value="<%= customer.address %>"><br><br>
+
+            <input type="password" name="password" style="width: 0%; opacity: 0;" value="<%= customer.password %>">
+
+            <input type="submit" value="Update">
+        </form>
+
+        <table class="w3-table" border="2" style="margin-top: 20px; margin-bottom: 50px;">
+            <tr> 
+                <th>No.</th>
+                <th>Item</th>
+                <th>Photo</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+            <% customer.Items.forEach((el, i)=> { %>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= el.name %></td>
+                    <td><img src="<%= el.imageUrl %>" alt="" style="width: 100px;"></td>
+                    <td><%= el.price %></td>
+                    <td><%= customer.formatDate() %></td>
+                </tr>
+            <% }) %> 
+        </table>
+    </div>
+
+
+<%- include('../partials/footer') %> 
