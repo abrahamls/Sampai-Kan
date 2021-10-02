@@ -30,9 +30,9 @@
               </div>
 
               <div style="display:flex ;">
-                <a href="/driver/delivering" class="w3-btn" style="width: 100%; background-color: #cc865b; color: black; margin-right: 5px;">Delivering</a>
+                <a href="/driver/delivering" id="deliver" class="w3-btn" style="width: 100%; background-color: #cc865b; color: black; margin-right: 5px;">Delivering</a>
               
-                <a href="/driver/arrived" class="w3-btn" style="width: 100%; background-color: #cc865b; color: black;">Arrived</a>
+                <a href="/driver/arrived" id="arriveds" class="w3-btn" style="width: 100%; background-color: #cc865b; color: black;">Arrived</a>
               </div>
 
               
@@ -46,6 +46,29 @@
     
 
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script>
+  $('#deliver').click(function(e){
+    e.preventDefault()
+    const process = {
+      title: "Wait Your Order!",
+      text: 'Your order is on the way, check your email',
+      icon: "success",
+    };
+    Swal.fire(process)
+  })
+  $('#arrived').click(function(e){
+    e.preventDefault()
+    const process = {
+      title: "Great!",
+      text: 'Your order arrived, check your email',
+      icon: "success",
+    };
+    Swal.fire(process)
+  })
+</script>
 
 <%- include('../partials/footer') %>
 <%# console.log(data)  %> 
